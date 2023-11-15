@@ -10,7 +10,7 @@ To set up Message Service on your local machine, follow these steps:
 1. **Clone the Repository**: Clone this repository to your local machine.
 2. **Virtual Environment**: It's recommended to create a virtual environment for this project to manage dependencies. You can use `virtualenv` or `conda` to create one.
 3. **Install Dependencies**: Run `pip install -r requirements.txt` to install the required Python dependencies.
-4. **Initial Setup**: Navigate to the project directory and run `python manage.py migrate` to set up the initial database schema.
+4. **Initial Setup**: In settings.py update the Database config, Navigate to the project directory and run `python manage.py migrate` to set up the initial database schema.
 
 ## Usage
 To run the Message Service:
