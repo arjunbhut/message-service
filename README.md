@@ -20,21 +20,23 @@ To run the Message Service:
 
 ## API Endpoints
 The following API endpoints are available in this project:
-- **Endpoint 1**: Description of the first endpoint.
-- **Endpoint 2**: Description of the second endpoint.
-- **...**: Additional endpoints as per the project's functionality.
+- **/get/messages/<account_id>**: Returns all the messages with the sender and
+receiver details pertaining to the provided account id.
+- **/create**: Post call which saves the message with the sender and receiver
+details.
+- Search for keys using the following filters.
+Assume you have keys: message_id, sender_number, receiver_number
+- **/search?message_id=”1,2”** would return messages with the given
+message ids.
+- **/search?sender_number=”1,2”** would return messages with the given
+sender_number - can single sender number or multiple sender numbers
+under a given account ID.
+- **/search?receiver_number=”1,2”** would return messages with the given
+receiver_number - can single sender number or multiple receiver
+numbers
 
 ## Docker Support
 If you prefer to use Docker:
 
 1. **Build the Docker Image**: Run `docker build -t message_service .` in the project directory.
 2. **Run the Docker Container**: Execute `docker run -p 8000:8000 message_service`.
-
-## Contributing
-Contributions to the Message Service project are welcome! Please refer to the `CONTRIBUTING.md` file for guidelines on how to make contributions.
-
-## License
-This project is licensed under the [LICENSE-NAME] License - see the `LICENSE` file for details.
-
-## Acknowledgments
-Special thanks to all the contributors and supporters of the Message Service project.
